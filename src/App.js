@@ -1,10 +1,10 @@
 import "./App.css";
-import BottomBar from "./Footer/Footer";
+import Footer from "./Footer/Footer";
 
 function App() {
   return (
     <div className="App">
-      <BottomBar />
+      <Footer />
     </div>
   );
 }
