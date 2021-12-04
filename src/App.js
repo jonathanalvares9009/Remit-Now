@@ -7,7 +7,7 @@ import Header from "./Header/Header";
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header balance="0" account="0x00000" />
       <Body />
       <Footer />
     </div>
