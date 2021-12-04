@@ -1,29 +1,27 @@
 footer {
-    /* Set the font size */
-    font-size: 3vh;
-    /* Set the font family */
-    font-family: 'Courier New', Courier, monospace;
-    /* Set the font weight */
-    font-weight: 800;
-    /* Font color of the footer text */
-    color: #FFFFFF;
-    /* Set the footer to the bottom */
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    /* Set the width of the footer */
-    width: 100vw;
-    /* Set the height of the footer */
-    height: 5vh;
-    /* Set the padding for the text */
-    padding-top: 1vh;
-    /* Set the text to the center of the footer */
-    text-align: center;
-    /* Set the background color for the footer */
-    background-color: #b67500;
+  /* Set the font size */
+  font-size: 3vh;
+  /* Set the font family */
+  font-family: "Courier New", Courier, monospace;
+  /* Set the font weight */
+  font-weight: 800;
+  /* Font color of the footer text */
+  color: #ffffff;
+  /* Set the footer to the bottom */
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  /* Set the width of the footer */
+  width: 100vw;
+  /* Set the height of the footer */
+  height: 5vh;
+  /* Set the padding for the text */
+  padding-top: 1vh;
+  /* Set the text to the center of the footer */
+  text-align: center;
 }
 
 span {
-    /* Color for the heart symbol */
-    color: #FF0000;
+  /* Color for the heart symbol */
+  color: #ff0000;
 }
