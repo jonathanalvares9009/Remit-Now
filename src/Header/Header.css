@@ -1,0 +1,22 @@
+header {
+    /* Set the font size */
+    font-size: 3vh;
+    /* Set the font family */
+    font-family: 'Courier New', Courier, monospace;
+    /* Set the font weight */
+    font-weight: 800;
+    /* Font color of the header text */
+    color: #FFFFFF;
+    /* Set the header to the top */
+    position: fixed;
+    left: 0;
+    top: 0;
+    /* Set the width of the header */
+    width: 100vw;
+    /* Set the height of the header */
+    height: 5vh;
+    /* Set the padding for the text */
+    padding-top: 1vh;
+    /* Set the background color for the header */
+    background-color: #b67500;
+}
