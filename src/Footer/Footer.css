@@ -19,6 +19,7 @@ footer {
   padding-top: 1vh;
   /* Set the text to the center of the footer */
   text-align: center;
+  background-color: #9805ed;
 }
 
 span {
