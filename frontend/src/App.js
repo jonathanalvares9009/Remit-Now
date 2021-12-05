@@ -11,6 +11,7 @@ class App extends Component {
     super(props);
     this.state = {
       account: "0x00000",
+      isLoggedIn: false,
     };
   }
 
@@ -19,13 +20,18 @@ class App extends Component {
     if (window.web3) {
       const account = await window.web3.eth.getAccounts();
       this.setState({ account: account[0] });
+      this.setState({ isLoggedIn: true });
     }
   }
 
   render() {
     return (
       <div className="App">
-        <Header balance="0" account={this.state.account} />
+        <Header
+          balance="0"
+          account={this.state.account}
+          isLoggedIn={this.state.isLoggedIn}
+        />
         <Body />
         <Footer />
       </div>
