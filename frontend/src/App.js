@@ -32,7 +32,7 @@ class App extends Component {
           account={this.state.account}
           isLoggedIn={this.state.isLoggedIn}
         />
-        <Body />
+        <Body sender={this.state.account} />
         <Footer />
       </div>
     );

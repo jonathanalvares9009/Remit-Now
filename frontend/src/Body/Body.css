@@ -4,7 +4,8 @@ main {
   left: 0;
   margin-bottom: 5vh;
   /* Set the width of the main component */
-  width: 100vw;
+  margin: 0 auto;
+  width: 70vw;
   /* Set the font color */
   color: white;
   text-align: center;

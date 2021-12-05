@@ -25,8 +25,8 @@ function Header(props) {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav>
                 <Nav.Link>Send Money</Nav.Link>
-                <Nav.Link href="#">Balance: ${props.balance}</Nav.Link>
-                <Nav.Link href="#">Transactions</Nav.Link>
+                <Nav.Link>Balance: ${props.balance}</Nav.Link>
+                <Nav.Link>Transactions</Nav.Link>
                 <Nav.Link onClick={() => setModalShow(true)}>
                   {props.account}
                 </Nav.Link>
