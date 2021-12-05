@@ -5,7 +5,7 @@ main {
   margin-bottom: 5vh;
   /* Set the width of the main component */
   width: 100vw;
-  /* background-color: white; */
-  background-color: white;
-  /* Set the height of the component */
+  /* Set the font color */
+  color: white;
+  text-align: center;
 }
