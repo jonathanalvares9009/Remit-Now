@@ -5,10 +5,7 @@ import Transfer from "./Transfer";
 function Body(props) {
   return (
     <main>
-      <Transfer
-        sender={props.sender}
-        receiverAccounts={props.receiverAccounts}
-      />
+      <Transfer sender={props.sender} />
     </main>
   );
 }
