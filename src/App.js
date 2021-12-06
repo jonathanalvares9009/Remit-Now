@@ -5,7 +5,7 @@ import Footer from "./Footer/Footer";
 import Body from "./Body/Body";
 import Header from "./Header/Header";
 import login from "./utils/login";
-import DecentralBank from "abi/DecentralBank.json";
+import DecentralBank from "./truffle_abis/DecentralBank.json";
 
 class App extends Component {
   constructor(props) {

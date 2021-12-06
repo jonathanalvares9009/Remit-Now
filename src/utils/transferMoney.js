@@ -1,4 +1,4 @@
-import DecentralBank from "abi/DecentralBank.json";
+import DecentralBank from "../truffle_abis/DecentralBank.json";
 
 async function transferMoney(e) {
   e.preventDefault();

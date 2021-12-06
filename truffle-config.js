@@ -20,8 +20,8 @@ module.exports = {
       gas: 4000000, //make sure this gas allocation isn't over 4M, which is the max
     },
   },
-  contracts_directory: "./contracts/",
-  contracts_build_directory: "./truffle_abis/",
+  contracts_directory: "./src/contracts/",
+  contracts_build_directory: "./src/truffle_abis/",
   compilers: {
     solc: {
       version: "^0.8.0",
