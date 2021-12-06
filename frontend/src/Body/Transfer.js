@@ -1,6 +1,6 @@
 import React from "react";
 import { Form, Button } from "react-bootstrap";
-import countries from "../utils/countries";
+// import countries from "../utils/countries";
 
 function Transfer(props) {
   return (
@@ -10,23 +10,12 @@ function Transfer(props) {
         <Form.Control type="plaintext" readOnly placeholder={props.sender} />
       </Form.Group>
 
-      <Form.Group className="mb-3" controlId="receiverAddress">
-        <Form.Label>Receiver Address</Form.Label>
-        <Form.Control
-          type="plaintext"
-          placeholder="Enter the receiver address"
-        />
-        <Form.Text style={{ color: "white" }}>
-          Please check the address before pressing send.
-        </Form.Text>
-      </Form.Group>
-
       <Form.Group className="mb-3" controlId="receiverCountry">
-        <Form.Label>Receiver Country</Form.Label>
+        <Form.Label>Receiver Address</Form.Label>
         <Form.Select aria-label="Default select example">
-          <option>Select the country</option>
-          {countries.map((country, idx) => (
-            <option value={idx + 1}>{country}</option>
+          <option>Select the address</option>
+          {props.receiverAccounts.map((account, idx) => (
+            <option value={idx + 1}>{account}</option>
           ))}
         </Form.Select>
       </Form.Group>
