@@ -13,7 +13,11 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2",
     "web3": "^1.6.1",
-    "abi": "file:../backend/truffle_abis"
+    "abi": "file:./backend/truffle_abis",
+    "@openzeppelin/contracts": "^4.4.0",
+    "@truffle/hdwallet-provider": "^2.0.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-register": "^6.26.0"
   },
   "scripts": {
     "start": "react-scripts start",
