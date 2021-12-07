@@ -14,16 +14,35 @@ class App extends Component {
       account: "0x00000",
       isLoggedIn: false,
       balance: "0",
+      component: (
+        <h1 style={{ textAlign: "center", color: "white" }}>
+          This website cannot be used without metamask. Please download metamask
+          and reload the page.
+        </h1>
+      ),
     };
   }
 
   async UNSAFE_componentWillMount() {
     await login();
-    await this.loadBlockchainData();
     if (window.web3) {
+      await this.loadBlockchainData();
       const account = await window.web3.eth.getAccounts();
       this.setState({ account: account[0] });
       this.setState({ isLoggedIn: true });
+      this.setState({
+        component: (
+          <>
+            <Header
+              balance={this.state.balance}
+              account={this.state.account}
+              isLoggedIn={this.state.isLoggedIn}
+            />
+            <Body sender={this.state.account} />
+            <Footer />
+          </>
+        ),
+      });
     }
   }
 
@@ -31,13 +50,9 @@ class App extends Component {
     const web3 = window.web3;
 
     // Get network ID
-    // const networkID = await web3.eth.net.getId();
-
     const account = await window.web3.eth.getAccounts();
 
     // Load DecentralBank contract
-    // const decentralBankData = await DecentralBank.networks[networkID];
-    // if (decentralBankData) {
     const decentralBank = new web3.eth.Contract(
       DecentralBank.abi,
       "0xB32900E517B1ad2115fF7c501Fa836D0C891D265"
@@ -46,23 +61,10 @@ class App extends Component {
       .account(account[0])
       .call();
     this.setState({ balance: decentralBankBalance.toString() });
-    // } else {
-    //   window.alert("DecentralBankbalance not deployed");
-    // }
   }
 
   render() {
-    return (
-      <div className="App">
-        <Header
-          balance={this.state.balance}
-          account={this.state.account}
-          isLoggedIn={this.state.isLoggedIn}
-        />
-        <Body sender={this.state.account} />
-        <Footer />
-      </div>
-    );
+    return <div className="App">{this.state.component}</div>;
   }
 }
 
