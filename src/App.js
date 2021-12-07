@@ -5,7 +5,7 @@ import Footer from "./Footer/Footer";
 import Body from "./Body/Body";
 import Header from "./Header/Header";
 import login from "./utils/login";
-import DecentralBank from "./truffle_abis/DecentralBank.json";
+import DecentralBank from "./backend/truffle_abis/DecentralBank.json";
 
 class App extends Component {
   constructor(props) {
@@ -14,12 +14,7 @@ class App extends Component {
       account: "0x00000",
       isLoggedIn: false,
       balance: "0",
-      component: (
-        <h1 style={{ textAlign: "center", color: "white" }}>
-          This website cannot be used without metamask. Please download metamask
-          and reload the page.
-        </h1>
-      ),
+      component: "",
     };
   }
 
@@ -41,6 +36,15 @@ class App extends Component {
             <Body sender={this.state.account} />
             <Footer />
           </>
+        ),
+      });
+    } else {
+      this.setState({
+        component: (
+          <h1 style={{ textAlign: "center", color: "white" }}>
+            This website cannot be used without metamask. Please download
+            metamask and reload the page.
+          </h1>
         ),
       });
     }

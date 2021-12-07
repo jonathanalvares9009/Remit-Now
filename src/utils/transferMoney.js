@@ -1,4 +1,4 @@
-import DecentralBank from "../truffle_abis/DecentralBank.json";
+import DecentralBank from "../backend/truffle_abis/DecentralBank.json";
 
 async function transferMoney(e) {
   e.preventDefault();
@@ -9,12 +9,7 @@ async function transferMoney(e) {
   const web3 = window.web3;
 
   const account = await window.web3.eth.getAccounts();
-  // Get network ID
-  //   const networkID = await web3.eth.net.getId();
-
   // Load DecentralBank contract
-  //   const decentralBankData = await DecentralBank.networks[networkID];
-  //   if (decentralBankData) {
   const decentralBank = new web3.eth.Contract(
     DecentralBank.abi,
     "0xB32900E517B1ad2115fF7c501Fa836D0C891D265"
@@ -25,9 +20,6 @@ async function transferMoney(e) {
       .send({ from: account[0] });
   };
   transfer();
-  //   } else {
-  //     window.alert("DecentralBankbalance not deployed");
-  //   }
 
   document.getElementById("form").reset();
   window.location.reload();
